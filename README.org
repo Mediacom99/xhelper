@@ -1,0 +1,5 @@
+* Installation
+
+#+BEGIN_SRC <bash>
+pip install -r requirements
+#+END_SRC
