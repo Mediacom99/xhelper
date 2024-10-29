@@ -1,5 +1,8 @@
-* Installation
+* Exutils
 
+Simple python script to rename/delete columns with the same name in multiple csv files.
+
+** Installation
 #+BEGIN_SRC <bash>
 pip install -r requirements
 #+END_SRC
