@@ -1,8 +1,6 @@
 # Custom 
-excelfiles/*
-original-files/*
-.direnv/*
-.envrc
+data/*
+.idea/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
