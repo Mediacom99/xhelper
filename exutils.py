@@ -5,7 +5,7 @@ from pathlib import Path
 from collections import Counter
 
 # Loads each file into its own dataframe, returns a collection of dataframes
-def loadExcelFiles(folder_path):
+def load_excel_files(folder_path):
 
     # List of xlsx files in folder_path
     excel_files = list(Path(folder_path).glob('*.csv'))
@@ -26,7 +26,7 @@ def loadExcelFiles(folder_path):
     return dfs
 
 #Print all unique column names and the counter of files with column with same name
-def getColumnsName(data):
+def get_columns_name(data):
     all_columns = []
     unique_cols = []
     for df in data:
@@ -61,19 +61,19 @@ def main():
             return
     print("Folder path:", args.folder)
 
-    data = loadExcelFiles(args.folder)
+    data = load_excel_files(args.folder)
 
-    all_columns = getColumnsName(data) #TODO should remove extension from filename
+    all_columns = get_columns_name(data) #TODO should remove extension from filename
 
     # FIXME: handle this better, not breaking everytime something goes wrong
 
     while True:
         target_col = input("\nEnter column name to process (or 'quit' to exit): ").strip()
         if target_col.lower() == 'quit':
-            return;
+            return
         if target_col not in all_columns:
             print("Column not found in any file!")
-            continue;
+            continue
         else:
             break
         
@@ -102,11 +102,10 @@ def main():
                             print(f"Dropped column {col_name} in {df}")
                 break
 
-    # Decide whether or not to save the current state by overwriting the modified files.
+    # Decide whether to save the current state by overwriting the modified files.
     while True:
         save_action = input("\nDo you want to save the current state ? Y/N ").strip()
         if save_action == 'Y':
-            #TODO add saving
             for df in data:
                 try:
                     file_path = Path(args.folder) / df
@@ -114,16 +113,13 @@ def main():
                     print(f"Saved changes to {df}")
                 except Exception as e:
                     print(f"Error saving {df}: {e}")
-            break;
+            break
         elif save_action == 'N':
             print("Exiting without saving current state!")
-            break; # I could add another loop so that if the user does not want to save he can go back to choosing another column and so on
+            break # I could add another loop so that if the user does not want to save he can go back to choosing another column and so on
         else:
             continue
-    
 
-
-    
 if __name__ == "__main__":
  main()
 
