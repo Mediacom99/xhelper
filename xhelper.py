@@ -131,6 +131,8 @@ class ExcelHelper(cmd.Cmd):
         if not self.data:
             print("No files currently loaded.")
             return
+
+        args = arg.split()
         
         total_rows = sum(len(df) for df in self.data.values())
         total_columns = sum(len(df.columns) for df in self.data.values())
