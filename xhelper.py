@@ -51,8 +51,7 @@ class ExcelHelper(cmd.Cmd):
             except Exception as e:
                 print(f"✗ Error loading {file}: {e}")
         return data
-    
-    
+
     def show_initial_summary(self):
         """Show summary of loaded files and repeated columns."""
         print(f"\nLoaded {len(self.data)} files from: {self.folder_path}")
@@ -109,7 +108,7 @@ class ExcelHelper(cmd.Cmd):
         Usage: 
           show all  - Show all columns
           show rep  - Show all columns that appear in multiple files.
-          show col <name>  - Show details about a specific column"""
+          show col 'name'  - Show details about a specific column"""
         try:
             args = shlex.split(arg)
         except ValueError as e:
@@ -117,7 +116,7 @@ class ExcelHelper(cmd.Cmd):
             return
         
         if not args:
-            print("\nPlease specify what to show: 'all', 'rep' or 'col <name>'")
+            print("\nPlease use command 'help show' for usage information")
             return
 
         if args[0] == 'rep':
