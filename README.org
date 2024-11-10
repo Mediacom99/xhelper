@@ -1,4 +1,4 @@
-* Exutils
+* XHELPER
 
 Simple python script to rename/delete columns with the same name in multiple csv files.
 
