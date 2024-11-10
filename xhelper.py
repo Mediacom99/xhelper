@@ -10,7 +10,7 @@ import shlex
 
 class ExcelHelper(cmd.Cmd):
     intro = 'Welcome to the excel column helper. Type help or ? to list commands.\n'
-    prompt = 'xHelper$ '
+    prompt = '>>> '
     file = None
 
     def __init__ (self, folder_path: str):
@@ -19,7 +19,7 @@ class ExcelHelper(cmd.Cmd):
         self.modified = False
         self.data = self.load_csv_files()
         if not self.data:
-            print(f"No CSV files found in given directory: {self.folder_path}.\nQuitting xhelper...")
+            print(f"\nNo CSV files found in given directory: {self.folder_path}.\nQuitting xhelper...")
             quit()
         self.column_locations = self.map_column_locations()
         self.repeated_columns = self.find_repeated_columns()
@@ -71,9 +71,21 @@ class ExcelHelper(cmd.Cmd):
         )
         for column in sorted_cols:
             files = sorted(self.column_locations[column])
-            print(f"Column: '{column}' appears in {len(files)} files:")
+            print(f"\nColumn: '{column}' appears in {len(files)} files:")
             for file in files:
                 print(f"  - {file}")
+        return
+
+    def show_all_columns(self):
+        """Display All Columns That Appear In Multiple Files And Their Locations."""
+        sorted_cols = sorted(
+            self.column_locations.keys(),
+            key=lambda col: len(self.column_locations[col]),
+            reverse=True
+        )
+        for column in sorted_cols:
+            files = sorted(self.column_locations[column])
+            print(f"Column: '{column}' appears in {len(files)} files")
         return
 
     def find_repeated_columns(self) -> Set[str]:
@@ -87,7 +99,7 @@ class ExcelHelper(cmd.Cmd):
             return line
             
         if not self.data and line.split()[0] not in ['quit', 'help']:
-            print("No files are currently loaded. Only 'quit' and 'help' commands are available.")
+            print("\nNo files are currently loaded. Only 'quit' and 'help' commands are available.")
             return ''
         return line
 
@@ -95,20 +107,23 @@ class ExcelHelper(cmd.Cmd):
     def do_show(self, arg):
         """Show details about columns.
         Usage: 
-          show all  - Show all columns that appear in multiple files
+          show all  - Show all columns
+          show rep  - Show all columns that appear in multiple files.
           show col <name>  - Show details about a specific column"""
         try:
             args = shlex.split(arg)
         except ValueError as e:
-            print(f"Error parsing arguments: {e}")
+            print(f"\nError parsing arguments: {e}")
             return
         
         if not args:
-            print("Please specify what to show: 'all' or 'col <name>'")
+            print("\nPlease specify what to show: 'all', 'rep' or 'col <name>'")
             return
 
-        if args[0] == 'all':
+        if args[0] == 'rep':
             self.show_repeated_columns()
+        elif args[0] == 'all':
+            self.show_all_columns()
         elif args[0] == 'col' and len(args) > 1:
             column_name = ' '.join(args[1:])
             if column_name in self.column_locations:
@@ -117,9 +132,9 @@ class ExcelHelper(cmd.Cmd):
                 for file in files:
                     print(f"  - {file}")
             else:
-                print(f"Column '{column_name}' not found in any file.")
+                print(f"\nColumn '{column_name}' not found in any file.")
         else:
-            print("Invalid show command. Use 'help show' for usage information.")
+            print("\nInvalid show command. Use 'help show' for usage information.")
     
 
 
@@ -129,7 +144,7 @@ class ExcelHelper(cmd.Cmd):
             files         - Show basic file information
             files detail  - Show detailed file information including column names"""
         if not self.data:
-            print("No files currently loaded.")
+            print("\nNo files currently loaded.")
             return
 
         args = arg.split()
@@ -179,16 +194,16 @@ class ExcelHelper(cmd.Cmd):
             # Use shlex.split() to handle quoted strings as single arguments
             args = shlex.split(arg)
         except ValueError as e:
-            print(f"Error parsing arguments: {e}")
+            print(f"\nError parsing arguments: {e}")
             return
 
         if len(args) != 2:
-            print("Usage: rename old_name new_name")
+            print("\nUsage: rename old_name new_name")
             return
         
         old_name, new_name = args
         if old_name not in self.column_locations:
-            print(f"Column '{old_name}' not found in any file!")
+            print(f"\nColumn '{old_name}' not found in any file!")
             return
 
         files_modified = []
@@ -222,23 +237,25 @@ class ExcelHelper(cmd.Cmd):
             print("Usage: delete 'column name'")
             return
         
-        if arg not in self.column_locations:
-            print(f"Column '{arg}' not found in any file!")
+        col_to_del = args[0]
+
+        if col_to_del not in self.column_locations:
+            print(f"Column '{col_to_del}' not found in any file!")
             return
 
         files_modified = []
-        for filename in self.column_locations[arg]:
+        for filename in self.column_locations[col_to_del]:
             df = self.data[filename]
-            df.drop(columns=[arg], inplace=True)
+            df.drop(columns=[col_to_del], inplace=True)
             files_modified.append(filename)
 
-        print(f"\nDeleted column '{arg}' from {len(files_modified)} files:")
+        print(f"\nDeleted column '{col_to_del}' from {len(files_modified)} files:")
         for file in sorted(files_modified):
             print(f"  - {file}")
 
         # Update our tracking
-        del self.column_locations[arg]
-        self.repeated_columns.discard(arg)
+        del self.column_locations[col_to_del]
+        self.repeated_columns.discard(col_to_del)
         self.modified = True
     
     
@@ -281,7 +298,7 @@ class ExcelHelper(cmd.Cmd):
                     break
                 elif save == 'n':
                     break
-        print("Thanks for using xhelper, goodbye!")
+        print("\nThanks for using xhelper, goodbye!")
         return True
 
 
