@@ -320,4 +320,5 @@ def main():
     xhelper.cmdloop()
 
 if __name__ == '__main__':
+    print("xhelper is starting...")
     main()
