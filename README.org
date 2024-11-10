@@ -9,6 +9,6 @@ pip install -r requirements
 
 ** How to use
 #+BEGIN_SRC <python>
-python exutils.py -f /path/to/my/folder
+python xhelper.py -f /path/to/my/folder
 #+END_SRC
-Then follow the on screen instructions to rename/delete.
+Then follow the on screen instructions. You can use 'help' or '?' to see the correct usage.
