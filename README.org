@@ -11,4 +11,4 @@ pip install -r requirements
 #+BEGIN_SRC <python>
 python xhelper.py -f /path/to/my/folder
 #+END_SRC
-Then follow the on screen instructions. You can use 'help' or '?' to see the correct usage.
+Then follow the on screen instructions. You can use 'help <command>' or '? <command>' to get help.
