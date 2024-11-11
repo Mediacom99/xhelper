@@ -13,7 +13,7 @@ class ExcelHelper(cmd.Cmd):
     prompt = '>>> '
     file = None
 
-    def __init__ (self, folder_path: str):
+    def __init__(self, folder_path: str):
         super().__init__()
         self.folder_path = folder_path
         self.modified = False
