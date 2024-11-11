@@ -4,7 +4,7 @@ Simple python script to rename/delete columns with the same name in multiple csv
 
 ** Dependencies Installation
 #+BEGIN_SRC <bash>
-ptyhon -m pip install -r requirements
+pip install -r requirements
 #+END_SRC
 
 ** How to use
