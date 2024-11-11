@@ -69,7 +69,7 @@ class ExcelHelper(cmd.Cmd):
             reverse=True
         )
         for column in sorted_cols:
-            files = sorted(self.column_locations[column])
+            files = self.column_locations[column]
             print(f"\nColumn: '{column}' appears in {len(files)} files:")
             for file in files:
                 print(f"  - {file}")
@@ -83,7 +83,7 @@ class ExcelHelper(cmd.Cmd):
             reverse=True
         )
         for column in sorted_cols:
-            files = sorted(self.column_locations[column])
+            files = self.column_locations[column]
             print(f"Column: '{column}' appears in {len(files)} files")
         return
 
@@ -123,10 +123,10 @@ class ExcelHelper(cmd.Cmd):
             self.show_repeated_columns()
         elif args[0] == 'all':
             self.show_all_columns()
-        elif args[0] == 'col' and len(args) > 1:
-            column_name = ' '.join(args[1:])
+        elif args[0] == 'col' and args[1] != '':
+            column_name = args[1]
             if column_name in self.column_locations:
-                files = sorted(self.column_locations[column_name])
+                files = self.column_locations[column_name]
                 print(f"\nColumn '{column_name}' appears in {len(files)} files:")
                 for file in files:
                     print(f"  - {file}")
@@ -159,7 +159,7 @@ class ExcelHelper(cmd.Cmd):
         
         if args and args[0] == 'detail':
             # Detailed view with column names
-            for filename, df in sorted(self.data.items()):
+            for filename, df in self.data.items():
                 print(f"\n{filename}:")
                 print(f"  Rows: {len(df):,}")
                 print(f"  Columns ({len(df.columns)}):")
@@ -168,16 +168,16 @@ class ExcelHelper(cmd.Cmd):
                 unique = [col for col in df.columns if col not in self.repeated_columns]
                 if repeated:
                     print("  Shared columns:")
-                    for col in sorted(repeated):
+                    for col in repeated:
                         count = len(self.column_locations[col])
                         print(f"    - {col} (appears in {count} files)")
                 if unique:
                     print("  Unique columns:")
-                    for col in sorted(unique):
+                    for col in unique:
                         print(f"    - {col}")
         else:
             # Basic view
-            for filename, df in sorted(self.data.items()):
+            for filename, df in self.data.items():
                 shared = sum(1 for col in df.columns if col in self.repeated_columns)
                 unique = len(df.columns) - shared
                 print(f"\n{filename}:")
@@ -212,7 +212,7 @@ class ExcelHelper(cmd.Cmd):
             files_modified.append(filename)
 
         print(f"\nRenamed column '{old_name}' to '{new_name}' in {len(files_modified)} files:")
-        for file in sorted(files_modified):
+        for file in files_modified:
             print(f"  - {file}")
 
         # Update our tracking
@@ -249,7 +249,7 @@ class ExcelHelper(cmd.Cmd):
             files_modified.append(filename)
 
         print(f"\nDeleted column '{col_to_del}' from {len(files_modified)} files:")
-        for file in sorted(files_modified):
+        for file in files_modified:
             print(f"  - {file}")
 
         # Update our tracking
@@ -276,7 +276,7 @@ class ExcelHelper(cmd.Cmd):
 
         if saved_files:
             print(f"\nSuccessfully saved {len(saved_files)} files:")
-            for file in sorted(saved_files):
+            for file in saved_files:
                 print(f"  - {file}")
         
         if errors:
@@ -315,8 +315,8 @@ def main():
         print("Error: provided path is not a valid directory, exiting.")
         return 1
     
-    xhelper = ExcelHelper(args.folder)
-    xhelper.cmdloop()
+    xh = ExcelHelper(args.folder)
+    xh.cmdloop()
 
 if __name__ == '__main__':
     print("xhelper is starting...")
