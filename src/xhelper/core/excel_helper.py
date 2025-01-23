@@ -9,7 +9,7 @@ from collections import defaultdict
 import random
 import pyreadstat
 import csv
-from excel_helper.utils import load_csv_files
+from xhelper.utils import load_csv_files
 
 
 class ExcelHelper(cmd.Cmd):
@@ -34,7 +34,7 @@ class ExcelHelper(cmd.Cmd):
 
         # 3. Se non ci sono né CSV né SAS, esci
         if not self.data and not self.sas_files:
-            print(f"\nNo CSV or SAS (.sas7bdat) files found in directory: {self.folder_path}.\nQuitting excel_helper...")
+            print(f"\nNo CSV or SAS (.sas7bdat) files found in directory: {self.folder_path}.\nQuitting xhelper...")
             quit()
 
         # 4. Se ho dei file CSV caricati, proseguo con la mappatura
@@ -380,7 +380,7 @@ class ExcelHelper(cmd.Cmd):
                     break
                 else:
                     print("Please enter 'y' or 'n'.")
-        print("\nThanks for using excel_helper, goodbye!")
+        print("\nThanks for using xhelper, goodbye!")
         return True
 
     def do_xml_generation(self, arg):

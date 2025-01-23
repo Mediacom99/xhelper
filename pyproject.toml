@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "excel_helper"
+name = "xhelper"
 version = "0.1.0"
 dependencies = [
     "pandas",
@@ -11,4 +11,4 @@ dependencies = [
 ]
 
 [project.scripts]
-xhelper = "excel_helper.__main__:main"
+xhelper = "xhelper.__main__:main"

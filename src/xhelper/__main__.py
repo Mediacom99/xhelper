@@ -1,7 +1,7 @@
 import argparse
 import os
-from excel_helper import ExcelHelper
-from excel_helper import compare_folders
+from xhelper import ExcelHelper
+from xhelper import compare_folders
 
 def main():
     parser = argparse.ArgumentParser(

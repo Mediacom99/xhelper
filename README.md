@@ -15,7 +15,7 @@ source <venv-name>/bin/activate
 ```
 Then you can install the development files:
 ```shell
-pip install -e git+https://github.com/Mediacom99/xhelper.git#egg=excel_helper
+pip install -e git+https://github.com/Mediacom99/xhelper.git#egg=xhelper
 ```
 
 ## Building
