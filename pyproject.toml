@@ -1,0 +1,14 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "excel_helper"
+version = "0.1.0"
+dependencies = [
+    "pandas",
+    "pyreadstat",
+]
+
+[project.scripts]
+xhelper = "excel_helper.__main__:main"
