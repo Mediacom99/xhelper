@@ -18,9 +18,22 @@ Then you can install the development files:
 pip install -e git+https://github.com/Mediacom99/xhelper.git#egg=excel_helper
 ```
 
-## How to use
+## Building
+First set up an editable installation:
 ```shell
-xhelper.py -f /path/to/my/folder
+pip install -e .
 ```
-Then follow the onscreen instructions. 
+Then you can modify the code and just call `xhelper`. 
+To build source code tar and wheel file (for binary) use:
+```shell
+python -m build
+```
+
+## Usage
+Just use it like this:
+```shell
+xhelper -f folders ...
+```
+then follow the onscreen instructions. 
 You can use 'help <command>' or '? <command>' to get help.
+
