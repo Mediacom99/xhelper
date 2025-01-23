@@ -5,7 +5,7 @@ import os
 import datetime
 
 
-def load_csv_files(self) -> Dict[str, pd.DataFrame]:
+def load_csv_files(folder_path) -> Dict[str, pd.DataFrame]:
         """
         Carica i file CSV dalla cartella specificata.
 
@@ -14,7 +14,7 @@ def load_csv_files(self) -> Dict[str, pd.DataFrame]:
                                      or empty {}
         """
         data = {}
-        csv_files = [f for f in os.listdir(self.folder_path) if f.lower().endswith('.csv')]
+        csv_files = [f for f in os.listdir(folder_path) if f.lower().endswith('.csv')]
 
         if not csv_files:
             return data  # Ritorna dizionario vuoto se non trova CSV
@@ -22,7 +22,7 @@ def load_csv_files(self) -> Dict[str, pd.DataFrame]:
         print("\nLoading CSV files...")
         for file in csv_files:
             try:
-                file_path = Path(self.folder_path) / file
+                file_path = Path(folder_path) / file
                 df = pd.read_csv(filepath_or_buffer=file_path, parse_dates=True)
                 data[file] = df
                 print(f"✓ Loaded: {file} ({len(df.columns)} columns, {len(df)} rows)")
