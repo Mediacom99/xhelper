@@ -1,10 +1,14 @@
 import cmd
 import os
+from dataclasses import dataclass
 from typing import Dict, Set
 from collections import defaultdict
 
-from xhelper.core.actions import do_files, do_save, do_quit, do_show, do_delete, do_rename, do_convert, do_xml_generation
-from xhelper.utils import load_csv_files
+import pandas as pd
+
+from xhelper.core.actions import do_files, do_save, do_quit, do_show, do_delete, do_rename, do_convert_sas_to_csv, do_xml_generation
+from xhelper.core.dvg_remap import do_dvg_remap
+from xhelper.utils import load_csv_files, load_csv_file
 
 
 class ExcelHelper(cmd.Cmd):
@@ -16,25 +20,53 @@ class ExcelHelper(cmd.Cmd):
     prompt = '>>> '
     file = None  # Per compatibilità con cmd.Cmd, se si volesse reindirizzare l'output.
 
+    folder_path: str
+    """Path to the folder containing the files to operate on"""
+
+    dvg_base_file_path: str
+    """Path to the dvg base file to use for dvg remapping"""
+
+    dvg_file: pd.DataFrame
+    """Dvg base file loaded onto pandas dataframe"""
+
+    modified: bool
+    """Flag to check if files have been modified (for save on exit)"""
+
+    sas_files: list[str]
+    """List of SAS file names"""
+
+    data: dict[str, pd.DataFrame]
+    """Mapping of file names to their corresponding DataFrames"""
+
+    column_locations: dict[str, set[str]]
+    """Mapping of column names to set of files containing that column"""
+
+    repeated_columns: set[str]
+    """Set of column names that appear in more than one file"""
+
+    # Assign imported methods to class
     do_files = do_files
     do_save = do_save
     do_quit = do_quit
     do_show = do_show
     do_delete = do_delete
     do_rename = do_rename
-    do_convert = do_convert
+    do_convert = do_convert_sas_to_csv
     do_xml_generation = do_xml_generation
+    do_dvg_remap = do_dvg_remap
 
 
-    def __init__(self, folder_path: str):
+    def __init__(self, folder_path: str, dvg_base_file_path: str):
         super().__init__()
-        self.folder_path = folder_path
-        self.modified = False
 
+        ## CLASS VARIABLES
+        self.folder_path: str = folder_path
+        self.dvg_file: pd.DataFrame = load_csv_file(dvg_base_file_path)
+        self.dvg_base_file_path: str = dvg_base_file_path
+        self.modified: bool = False
         # 1. Carica i file CSV
-        self.data = load_csv_files(folder_path)
-
-        # 2. Cerca eventuali file SAS
+        self.data: dict[str,pd.DataFrame] = load_csv_files(folder_path)
+        # 2. Cerca eventuali file SASs
         self.sas_files = [f for f in os.listdir(self.folder_path) if f.lower().endswith('.sas7bdat')]
 
         # 3. Se non ci sono né CSV né SAS, esci
@@ -44,8 +76,8 @@ class ExcelHelper(cmd.Cmd):
 
         # 4. Se ho dei file CSV caricati, proseguo con la mappatura
         if self.data:
-            self.column_locations = self.map_column_locations()
-            self.repeated_columns = self.find_repeated_columns()
+            self.column_locations: dict[str, set[str]] = self.map_column_locations()
+            self.repeated_columns: set[str] = self.find_repeated_columns()
             self.show_initial_summary()
         else:
             # Caso in cui NON ci siano file CSV ma ci siano file SAS

@@ -30,6 +30,16 @@ def load_csv_files(folder_path) -> Dict[str, pd.DataFrame]:
                 print(f"✗ Error loading {file}: {e}")
         return data
 
+def load_csv_file(file_path: str) -> pd.DataFrame:
+    df = {}
+    try:
+        df = pd.read_csv(file_path, parse_dates=True, keep_default_na=False, na_values='')
+        print(f"✓ Loaded: {file_path} ({len(df.columns)} columns, {len(df)} rows)")
+    except Exception as e:
+        print(f"✗ Error loading {file_path}: {e}")
+    return df
+
+
 
 def _write_txt_report(lines):
     """Scrive il report in un file .txt con data e ora nel nome, senza codici ANSI."""

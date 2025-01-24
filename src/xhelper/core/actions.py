@@ -7,8 +7,7 @@ import random
 import pyreadstat
 import csv
 
-
-def do_show(self, arg):
+def do_show(self: "ExcelHelper", arg):
     """
     Show details about columns.
 
@@ -43,7 +42,7 @@ def do_show(self, arg):
     else:
         print("\nInvalid show command. Use 'help show' for usage information.")
 
-def do_files(self, arg):
+def do_files(self: "ExcelHelper", arg):
     """
     Show detailed information about loaded files.
 
@@ -92,7 +91,7 @@ def do_files(self, arg):
             print(f"  Rows: {len(df):,}")
             print(f"  Columns: {len(df.columns):,} total ({shared} shared, {unique} unique)")
 
-def do_rename(self, arg):
+def do_rename(self: "ExcelHelper", arg):
     """
     Rename a column in all files where it appears.
 
@@ -140,7 +139,7 @@ def do_rename(self, arg):
 
     self.modified = True
 
-def do_delete(self, arg):
+def do_delete(self: "ExcelHelper", arg):
     """
     Delete a column from all files where it appears.
 
@@ -178,7 +177,7 @@ def do_delete(self, arg):
     self.repeated_columns.discard(col_to_del)
     self.modified = True
 
-def do_save(self, arg):
+def do_save(self: "ExcelHelper", arg):
     """
     Save changes to all modified files.
 
@@ -211,7 +210,7 @@ def do_save(self, arg):
 
     self.modified = False
 
-def do_convert(self, arg):
+def do_convert_sas_to_csv(self: "ExcelHelper", arg):
     """
     Convert all .sas7bdat files in the folder to .csv.
 
@@ -247,7 +246,7 @@ def do_convert(self, arg):
 
     print(f"All files have been processed. Converted CSVs are in {output_folder}.")
 
-def do_quit(self, arg):
+def do_quit(self: "ExcelHelper", arg):
     """
     Exit the program. Will prompt to save if there are unsaved changes.
 
@@ -267,7 +266,7 @@ def do_quit(self, arg):
     print("\nThanks for using xhelper, goodbye!")
     return True
 
-def do_xml_generation(self, arg):
+def do_xml_generation(self: "ExcelHelper", arg):
     """
     Generate a CSV report about all columns across the loaded files.
 

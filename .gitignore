@@ -1,6 +1,9 @@
 # Custom 
 data/*
 .idea/*
+miweb-db
+transformed_data
+.DS_Store
 
 
 # Byte-compiled / optimized / DLL files

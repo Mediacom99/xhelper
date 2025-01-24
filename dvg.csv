@@ -1,0 +1,299 @@
+DVG_id,DVG_SUBSET_NM,DVG_NAME,DVG_VAL,DVG_display_sn,ACTIVE_FLAG,DVG_LVAL
+342201.0,2.0,AEOUT,1,1.0,Y,Resolved
+342201.0,2.0,AEOUT,2,2.0,Y,Not resolved
+342201.0,2.0,AEOUT,3,3.0,Y,Unknown
+342201.0,2.0,AEOUT,4,4.0,Y,Death (complete Death Report Form )
+342201.0,2.0,AEOUT,5,5.0,Y,Improved
+342201.0,2.0,AEOUT,6,6.0,Y,Worsened
+342201.0,2.0,AEOUT,7,7.0,Y,Resolved with sequelae
+342201.0,3.0,AEOUT,1,1.0,Y,Resolved
+342201.0,3.0,AEOUT,2,2.0,Y,Not resolved
+342201.0,3.0,AEOUT,3,3.0,Y,Improved
+342201.0,3.0,AEOUT,4,4.0,Y,Worsened
+342201.0,3.0,AEOUT,5,5.0,Y,Resolved with sequelae
+342201.0,3.0,AEOUT,6,6.0,Y,Unknown
+342201.0,3.0,AEOUT,7,7.0,Y,Death
+348801.0,1.0,AETAKEN,1,1.0,Y,none
+348801.0,1.0,AETAKEN,2,2.0,Y,delay in starting protocol treatment
+348801.0,1.0,AETAKEN,3,3.0,Y,dose interruption/modification
+348801.0,1.0,AETAKEN,4,4.0,Y,definitive treatment discontinuation
+349101.0,1.0,ASSESSTY,1,1.0,Y,Clinical
+349101.0,1.0,ASSESSTY,2,2.0,Y,Biochemical
+349101.0,1.0,ASSESSTY,3,3.0,Y,Radiological
+349101.0,1.0,ASSESSTY,4,4.0,Y,Cytological
+349101.0,1.0,ASSESSTY,5,5.0,Y,Histological
+349101.0,2.0,ASSESSTY,1,1.0,Y,Clinical
+349101.0,2.0,ASSESSTY,2,2.0,Y,Radiological
+349101.0,2.0,ASSESSTY,3,3.0,Y,Cytological
+349101.0,2.0,ASSESSTY,4,4.0,Y,Histological
+347201.0,1.0,CARDSTA,1,1.0,Y,Not Active
+347201.0,1.0,CARDSTA,2,2.0,Y,Active
+347901.0,1.0,CHEMREA,1,1.0,Y,Treatment with chemotherapy permanently discontinued
+347901.0,1.0,CHEMREA,2,2.0,Y,"Day administration omitted, but Chemotherapy will continue"
+347901.0,2.0,CHEMREA,1,1.0,Y,Regimen permanently discontinued
+347901.0,2.0,CHEMREA,2,2.0,Y,"Cycle omitted, but Chemotherapy will continue"
+349001.0,1.0,CMROUTE,1,1.0,Y,i.v.
+349001.0,1.0,CMROUTE,2,2.0,Y,i.m.
+349001.0,1.0,CMROUTE,3,3.0,Y,o.s.
+349001.0,1.0,CMROUTE,4,4.0,Y,s.c
+349001.0,1.0,CMROUTE,5,5.0,Y,Inhalational
+349001.0,1.0,CMROUTE,6,6.0,Y,Dermal/Transdermal
+349001.0,1.0,CMROUTE,7,7.0,Y,Other
+349301.0,1.0,CONTACTTY,1,1.0,Y,visit
+349301.0,1.0,CONTACTTY,2,2.0,Y,Other
+353901.0,1.0,CONTMETH,1,1.0,Y,Abstinence
+353901.0,1.0,CONTMETH,2,2.0,Y,"Oral Contraceptive, specify drug"
+353901.0,1.0,CONTMETH,3,3.0,Y,"Other, specify"
+349601.0,1.0,DEATHCAUSE,1,1.0,Y,Breast cancer progression
+349601.0,1.0,DEATHCAUSE,2,2.0,Y,"Other cancer, specify"
+349601.0,1.0,DEATHCAUSE,3,3.0,Y,Adverse Event (complete Adverse Event form)
+349601.0,1.0,DEATHCAUSE,4,4.0,Y,"Non-malignant systemic disease, specify"
+349601.0,1.0,DEATHCAUSE,5,5.0,Y,"Other, specify"
+349601.0,1.0,DEATHCAUSE,6,6.0,Y,Unknown
+349701.0,1.0,DEATHINFO,1,1.0,Y,autopsy
+349701.0,1.0,DEATHINFO,2,2.0,Y,medical records/death certificate
+349701.0,1.0,DEATHINFO,3,3.0,Y,family doctor
+349701.0,1.0,DEATHINFO,4,4.0,Y,relative or friend
+349701.0,1.0,DEATHINFO,5,5.0,Y,"other, specify"
+348101.0,1.0,DISCONTREA,1,1.0,Y,Adverse Event
+348101.0,1.0,DISCONTREA,2,2.0,Y,Consent Withdrawal
+348101.0,1.0,DISCONTREA,3,3.0,Y,Progressive Disease
+348101.0,1.0,DISCONTREA,4,4.0,Y,Patient refused to continue the Chemotherapy
+348101.0,1.0,DISCONTREA,5,5.0,Y,Other
+348101.0,2.0,DISCONTREA,1,1.0,Y,Adverse Event
+348101.0,2.0,DISCONTREA,2,2.0,Y,Consent Withdrawal
+348101.0,2.0,DISCONTREA,3,3.0,Y,Progressive Disease
+348101.0,2.0,DISCONTREA,4,4.0,Y,Patient refused to continue the endocrine therapy
+348101.0,2.0,DISCONTREA,5,5.0,Y,Other
+348001.0,1.0,DISPROGR,1,1.0,Y,LOCO-REGIONAL
+348001.0,1.0,DISPROGR,2,2.0,Y,DISTANT
+348401.0,1.0,DISSECT,1,1.0,Y,first level only
+348401.0,1.0,DISSECT,2,2.0,Y,first and second level
+348401.0,1.0,DISSECT,3,3.0,Y,all three levels
+348401.0,1.0,DISSECT,4,4.0,Y,Lymphnodes biopsy
+348401.0,1.0,DISSECT,5,5.0,Y,not done
+346101.0,1.0,DISSTAGE,1,1.0,Y,T2N0-1; T3N0
+346101.0,1.0,DISSTAGE,2,2.0,Y,"T3N1; T4, any N; N2-3, any T"
+339301.0,2.0,DONEND,1,1.0,Y,Not Done
+339301.0,2.0,DONEND,2,2.0,Y,Done
+354301.0,1.0,DRUGCOM,1,1.0,Y,Certain
+354301.0,1.0,DRUGCOM,2,2.0,Y,Probable
+354301.0,1.0,DRUGCOM,3,3.0,Y,Possible
+354301.0,1.0,DRUGCOM,4,4.0,Y,Not likely
+354301.0,1.0,DRUGCOM,5,5.0,Y,Unrelated
+354201.0,1.0,DRUGSTA,1,1.0,Y,Study drug discontinued on
+354201.0,1.0,DRUGSTA,2,2.0,Y,Study drug continued during this pregnancy
+354601.0,1.0,DRUSTA,1,1.0,Y,Interrupted
+354601.0,1.0,DRUSTA,2,2.0,Y,Discontinued
+334001.0,2.0,ECGRES,1,1.0,Y,normal
+334001.0,2.0,ECGRES,2,2.0,Y,abnormal
+334001.0,2.0,ECGRES,NK,995.0,Y,NK
+334001.0,2.0,ECGRES,NE,996.0,Y,NE
+334001.0,2.0,ECGRES,NA,997.0,Y,NA
+334001.0,2.0,ECGRES,UK,998.0,Y,UK
+334001.0,2.0,ECGRES,ND,999.0,Y,ND
+349801.0,1.0,ECOG,0,1.0,Y,"Fully active, able to carry on all pre-disease performance without restriction"
+349801.0,1.0,ECOG,1,2.0,Y,"Restricted in physically strenuous activity but ambulatory and able to carry out work of a light or sedentary nature, e.g., light house work, office work"
+349801.0,1.0,ECOG,2,3.0,Y,Ambulatory and capable of all selfcare but unable to carry out any work activities. Up and about more than 50% of waking hours
+349801.0,1.0,ECOG,3,4.0,Y,"Capable of only limited selfcare, confined to bed or chair more than 50% of waking hours"
+349801.0,1.0,ECOG,4,5.0,Y,Completely disabled. Cannot carry on any selfcare. Totally confined to bed or chair
+349801.0,1.0,ECOG,5,6.0,Y,Dead
+353701.0,1.0,FEMCUR,1,1.0,Y,No longer pregnant
+353701.0,1.0,FEMCUR,2,2.0,Y,Unknown
+353801.0,1.0,FEMELEC,1,1.0,Y,Carry pregnancy to term (Expected Delivery Date)
+353801.0,1.0,FEMELEC,2,2.0,Y,Terminate Pregnancy (Date performed or pending)
+349201.0,1.0,FUPSTA,1,1.0,Y,Alive
+349201.0,1.0,FUPSTA,2,2.0,Y,Lost-to-follow up
+349201.0,1.0,FUPSTA,3,3.0,Y,Consent withdrawn
+349201.0,1.0,FUPSTA,4,4.0,Y,Dead
+346201.0,1.0,HISTOL,1,1.0,Y,Ductal invasive
+346201.0,1.0,HISTOL,2,2.0,Y,Lobular invasive
+346201.0,1.0,HISTOL,3,3.0,Y,Other
+346201.0,1.0,HISTOL,4,4.0,Y,Not Done
+348601.0,1.0,HISTOPGR,1,1.0,Y,G1
+348601.0,1.0,HISTOPGR,2,2.0,Y,G2
+348601.0,1.0,HISTOPGR,3,3.0,Y,G3
+348601.0,1.0,HISTOPGR,4,4.0,Y,Not Done
+348501.0,1.0,HISTOPTY,1,1.0,Y,Absence of invasive Cells
+348501.0,1.0,HISTOPTY,2,2.0,Y,Infiltrating Ductal Carcinoma
+348501.0,1.0,HISTOPTY,3,3.0,Y,Infiltrating Lobular Carcinoma
+348501.0,1.0,HISTOPTY,4,4.0,Y,Infiltrating Ductal and Lobular Carcinoma
+348501.0,1.0,HISTOPTY,5,5.0,Y,"Other, specify"
+346401.0,1.0,IMMUNTEST,0,1.0,Y,0
+346401.0,1.0,IMMUNTEST,1,2.0,Y,1+
+346401.0,1.0,IMMUNTEST,2,3.0,Y,2+
+346401.0,1.0,IMMUNTEST,3,4.0,Y,3+
+339601.0,2.0,INITFUP,I,1.0,Y,Initial
+339601.0,2.0,INITFUP,F,2.0,Y,Follow-up
+347501.0,1.0,INVOLV,1,1.0,Y,Involved
+347501.0,1.0,INVOLV,2,2.0,Y,Not involved
+363701.0,1.0,LABUNIT_CHEMI,G/L,1.0,Y,G/L
+363701.0,1.0,LABUNIT_CHEMI,G/DL,2.0,Y,G/DL
+363701.0,1.0,LABUNIT_CHEMI,MG/L,3.0,Y,MG/L
+363701.0,1.0,LABUNIT_CHEMI,MG/DL,4.0,Y,MG/DL
+363701.0,1.0,LABUNIT_CHEMI,MG/ML,5.0,Y,MG/ML
+363701.0,1.0,LABUNIT_CHEMI,U/L,6.0,Y,U/L
+363701.0,1.0,LABUNIT_CHEMI,UKAT/L,7.0,Y,UKAT/L
+363701.0,1.0,LABUNIT_CHEMI,IU/L,8.0,Y,IU/L
+363701.0,1.0,LABUNIT_CHEMI,UI/L,9.0,Y,UI/L
+363701.0,1.0,LABUNIT_CHEMI,MMOL/L,10.0,Y,MMOL/L
+363701.0,1.0,LABUNIT_CHEMI,MMOL/DL,11.0,Y,MMOL/DL
+363701.0,1.0,LABUNIT_CHEMI,UMOL/L,12.0,Y,UMOL/L
+363701.0,1.0,LABUNIT_CHEMI,UMOL/DL,13.0,Y,UMOL/DL
+363701.0,1.0,LABUNIT_CHEMI,NMOL/L,14.0,Y,NMOL/L
+363701.0,1.0,LABUNIT_CHEMI,NMOL/DL,15.0,Y,NMOL/DL
+363701.0,1.0,LABUNIT_CHEMI,MEQ/L,16.0,Y,MEQ/L
+363701.0,1.0,LABUNIT_CHEMI,MEQ/DL,17.0,Y,MEQ/DL
+363701.0,1.0,LABUNIT_CHEMI,NA,18.0,Y,Not Assessed
+363701.0,1.0,LABUNIT_CHEMI,ND,19.0,Y,Not Done
+363601.0,1.0,LABUNIT_HEMA,10^12/L,1.0,Y,10^12/L
+363601.0,1.0,LABUNIT_HEMA,10^9/L,2.0,Y,10^9/L
+363601.0,1.0,LABUNIT_HEMA,10^9/ML,3.0,Y,10^9/ML
+363601.0,1.0,LABUNIT_HEMA,10^9/UL,4.0,Y,10^9/UL
+363601.0,1.0,LABUNIT_HEMA,10^6/L,5.0,Y,10^6/L
+363601.0,1.0,LABUNIT_HEMA,10^6/ML,6.0,Y,10^6/ML
+363601.0,1.0,LABUNIT_HEMA,10^6/UL,7.0,Y,10^6/UL
+363601.0,1.0,LABUNIT_HEMA,10^6/MM^3,8.0,Y,10^6/MM^3
+363601.0,1.0,LABUNIT_HEMA,10^3/L,9.0,Y,10^3/L
+363601.0,1.0,LABUNIT_HEMA,10^3/ML,10.0,Y,10^3/ML
+363601.0,1.0,LABUNIT_HEMA,10^3/UL,11.0,Y,10^3/UL
+363601.0,1.0,LABUNIT_HEMA,10^3/MM^3,12.0,Y,10^3/MM^3
+363601.0,1.0,LABUNIT_HEMA,MM^3,13.0,Y,MM^3
+363601.0,1.0,LABUNIT_HEMA,/MM^3,14.0,Y,/MM^3
+363601.0,1.0,LABUNIT_HEMA,/UL,15.0,Y,/UL
+363601.0,1.0,LABUNIT_HEMA,ML,16.0,Y,ML
+363601.0,1.0,LABUNIT_HEMA,%,17.0,Y,%
+363601.0,1.0,LABUNIT_HEMA,G/L,18.0,Y,G/L
+363601.0,1.0,LABUNIT_HEMA,G/DL,19.0,Y,G/DL
+363601.0,1.0,LABUNIT_HEMA,MG/L,20.0,Y,MG/L
+363601.0,1.0,LABUNIT_HEMA,MG/DL,21.0,Y,MG/DL
+363601.0,1.0,LABUNIT_HEMA,MG/ML,22.0,Y,MG/ML
+363601.0,1.0,LABUNIT_HEMA,UMOL/L,23.0,Y,microMOL/L
+363601.0,1.0,LABUNIT_HEMA,MMOL/L,24.0,Y,MMOL/L
+363601.0,1.0,LABUNIT_HEMA,MEQ/L,25.0,Y,MEQ/L
+363601.0,1.0,LABUNIT_HEMA,NA,26.0,Y,Not Assessed
+363601.0,1.0,LABUNIT_HEMA,ND,27.0,Y,Not Done
+347101.0,1.0,LVEF,1,1.0,Y,Ultrasound
+347101.0,1.0,LVEF,2,2.0,Y,MUGA
+345901.0,1.0,LYMPHO,1,1.0,Y,N0
+345901.0,1.0,LYMPHO,2,2.0,Y,N1
+345901.0,1.0,LYMPHO,3,3.0,Y,N2
+348301.0,1.0,MARGIN,1,1.0,Y,Negative
+348301.0,1.0,MARGIN,2,2.0,Y,Positive
+348301.0,1.0,MARGIN,3,3.0,Y,Close
+347301.0,1.0,MENOPSTAT,1,1.0,Y,Surgically Sterilized
+347301.0,1.0,MENOPSTAT,2,2.0,Y,Menstruating
+347301.0,1.0,MENOPSTAT,3,3.0,Y,Menopausal
+347601.0,1.0,METASTASES,1,1.0,Y,Metastases present
+347601.0,1.0,METASTASES,2,2.0,Y,Metastases absent
+347001.0,1.0,MHTYPE,1,1.0,Y,Not active
+347001.0,1.0,MHTYPE,2,2.0,Y,Active without treatment
+347001.0,1.0,MHTYPE,3,3.0,Y,Active with treatment
+346001.0,1.0,N3SITE,1,1.0,Y,Supraclavicular
+346001.0,1.0,N3SITE,2,2.0,Y,Internal Mammary
+346001.0,1.0,N3SITE,3,3.0,Y,Infraclavicular
+354401.0,1.0,NA,Y,1.0,Y,not available
+136501.0,3.0,NABND,1,1.0,Y,Normal
+136501.0,3.0,NABND,2,2.0,Y,Abnormal
+371601.0,1.0,NEUROP,1,1.0,Y,"yes, CTC grade unchanged"
+371601.0,1.0,NEUROP,2,2.0,Y,"yes, CTC grade changed (please update the AE form)"
+371601.0,1.0,NEUROP,3,3.0,Y,"yes, resolved during this follow-up period (please update the AE form)"
+371601.0,1.0,NEUROP,4,4.0,Y,"no, resolved in a previous follow-up visit"
+120201.0,2.0,NOYES,N,1.0,Y,No
+120201.0,2.0,NOYES,Y,2.0,Y,Yes
+120201.0,6.0,NOYES,N,1.0,Y,No
+120201.0,6.0,NOYES,Y,2.0,Y,Yes
+120201.0,6.0,NOYES,UK,3.0,Y,UK
+346501.0,1.0,POSNEG,P,1.0,Y,Positive
+346501.0,1.0,POSNEG,N,2.0,Y,Negative
+346501.0,2.0,POSNEG,P,1.0,Y,Positive
+346501.0,2.0,POSNEG,N,2.0,Y,Negative
+346501.0,2.0,POSNEG,NA,3.0,Y,Not routinely assessed
+353601.0,1.0,PREGDIAG,1,1.0,Y,Home Urine Test
+353601.0,1.0,PREGDIAG,2,2.0,Y,Office Urine Test
+353601.0,1.0,PREGDIAG,3,3.0,Y,Serum Test
+354101.0,1.0,PREGOUT,1,1.0,Y,Outcome known
+354101.0,1.0,PREGOUT,2,2.0,Y,Patient lost to follow-up; pregnancy outcome unknown
+282901.0,3.0,PREGTEST,P,4.0,Y,positive
+282901.0,3.0,PREGTEST,N,5.0,Y,negative
+282901.0,3.0,PREGTEST,NA,6.0,Y,not applicable
+277501.0,4.0,PRIMREA,1,1.0,Y,Death
+277501.0,4.0,PRIMREA,2,2.0,Y,Life threatening
+277501.0,4.0,PRIMREA,3,3.0,Y,Congenital anomaly
+277501.0,4.0,PRIMREA,4,4.0,Y,Hospitalization/prolongation
+277501.0,4.0,PRIMREA,5,5.0,Y,Persistent/significant disability
+277501.0,4.0,PRIMREA,6,6.0,Y,Medically significant
+277501.0,4.0,PRIMREA,7,7.0,Y,"Other, specify"
+56201.0,11.0,RACE,1,1.0,Y,Caucasian
+56201.0,11.0,RACE,2,2.0,Y,Black
+56201.0,11.0,RACE,3,3.0,Y,Asian
+56201.0,11.0,RACE,4,4.0,Y,Other
+56201.0,12.0,RACE,1,1.0,Y,White
+56201.0,12.0,RACE,2,2.0,Y,Black
+56201.0,12.0,RACE,3,3.0,Y,Asian
+56201.0,12.0,RACE,4,4.0,Y,Other
+347701.0,1.0,RANDTREAT,1,1.0,Y,Abraxane (125 mg/m^2)
+347701.0,1.0,RANDTREAT,2,2.0,Y,Paclitaxel (90 mg/m^2)
+347801.0,1.0,REDUCTION,1,1.0,Y,Hematological Adverse Event
+347801.0,1.0,REDUCTION,2,2.0,Y,Non-Hematological Adverse Event
+347801.0,1.0,REDUCTION,3,3.0,Y,"Other, specify"
+345601.0,1.0,RESGRP,1,1.0,Y,Michelangelo Group
+345601.0,1.0,RESGRP,2,2.0,Y,Australian Group
+345601.0,1.0,RESGRP,3,3.0,Y,GEICAM
+345601.0,1.0,RESGRP,4,4.0,Y,Singapore Group
+222401.0,2.0,RIGLEF,L,1.0,Y,Left
+222401.0,2.0,RIGLEF,R,2.0,Y,Right
+354501.0,1.0,SAEACT,1,1.0,Y,None
+354501.0,1.0,SAEACT,2,2.0,Y,Delayed Treatment Start
+34701.0,11.0,SEVERITY,1,1.0,Y,Grade I
+34701.0,11.0,SEVERITY,2,2.0,Y,Grade II
+34701.0,11.0,SEVERITY,3,3.0,Y,Grade III
+34701.0,11.0,SEVERITY,4,4.0,Y,Grade IV
+34701.0,11.0,SEVERITY,5,5.0,Y,Grade V
+348201.0,1.0,SURGTYPE,1,1.0,Y,Wide excision
+348201.0,1.0,SURGTYPE,2,2.0,Y,Lumpectomy
+348201.0,1.0,SURGTYPE,3,3.0,Y,Quadrantectomy
+348201.0,1.0,SURGTYPE,4,4.0,Y,Mastectomy
+348201.0,1.0,SURGTYPE,5,5.0,Y,Other
+348901.0,1.0,TREATREL,1,1.0,Y,Suspected
+348901.0,1.0,TREATREL,2,2.0,Y,Unsuspected
+348901.0,1.0,TREATREL,3,3.0,Y,Unknown
+348901.0,1.0,TREATREL,4,4.0,Y,No
+348901.0,1.0,TREATREL,5,5.0,Y,NA
+348901.0,2.0,TREATREL,1,1.0,Y,Suspected
+348901.0,2.0,TREATREL,2,2.0,Y,Unsuspected
+348901.0,2.0,TREATREL,3,3.0,Y,Unknown
+348901.0,2.0,TREATREL,4,4.0,Y,No
+348901.0,2.0,TREATREL,5,5.0,Y,NA
+345701.0,1.0,TSTAGE,1,1.0,Y,T2
+345701.0,1.0,TSTAGE,2,2.0,Y,T3
+345701.0,1.0,TSTAGE,3,3.0,Y,T4a
+345701.0,1.0,TSTAGE,4,4.0,Y,T4b
+345701.0,1.0,TSTAGE,5,5.0,Y,T4c
+345701.0,1.0,TSTAGE,6,6.0,Y,T4d
+345701.0,1.0,TSTAGE,7,7.0,Y,Other
+347401.0,1.0,TUMMETHOD,1,1.0,Y,Mammography
+347401.0,1.0,TUMMETHOD,2,2.0,Y,Ultrasound
+347401.0,1.0,TUMMETHOD,3,3.0,Y,MRI
+347401.0,1.0,TUMMETHOD,4,4.0,Y,CT scan
+347401.0,1.0,TUMMETHOD,5,5.0,Y,Other Method
+345801.0,1.0,TUMOR,1,1.0,Y,"Operable, conservative surgery"
+345801.0,1.0,TUMOR,2,2.0,Y,"Operable, mastectomy"
+345801.0,1.0,TUMOR,3,3.0,Y,inoperable
+348701.0,1.0,TUMORBED,1,1.0,Y,"Fibrotic ""SCAR"""
+348701.0,1.0,TUMORBED,2,2.0,Y,Lymphocitic Infiltration
+348701.0,1.0,TUMORBED,3,3.0,Y,Foamy Cells
+348701.0,1.0,TUMORBED,4,4.0,Y,Lack of Glandular Tissue
+346301.0,1.0,TUMORGR,1,1.0,Y,Well Differentiated
+346301.0,1.0,TUMORGR,2,2.0,Y,Moderate Differentiated
+346301.0,1.0,TUMORGR,3,3.0,Y,Poorly Differentiated
+346301.0,1.0,TUMORGR,4,4.0,Y,Not assessed
+276701.0,1.0,Y,Y,1.0,Y,Y
+33301.0,4.0,YESNO,Y,1.0,Y,Yes
+33301.0,4.0,YESNO,N,2.0,Y,No
+33301.0,4.0,YESNO,NA,4.0,Y,NA
+33301.0,5.0,YESNO,Y,1.0,Y,Yes
+33301.0,5.0,YESNO,N,2.0,Y,No
+354001.0,1.0,YESNOUK,Y,1.0,Y,Yes
+354001.0,1.0,YESNOUK,N,2.0,Y,No
+354001.0,1.0,YESNOUK,UK,3.0,Y,Unknown
